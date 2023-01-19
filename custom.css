@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 body {
-  background-image: url(../images/bg-dark.png);
+  background-image: url(./bg-dark.png);
   background-repeat: repeat;
   height: 100%;
   width: 100%;
@@ -54,15 +54,15 @@ h1 h5 p {
 }
 
 .c-hero-flex__item:nth-child(1) {
-  background: url(../images/drumpad.png) no-repeat center center;
+  background: url(./drumpad.png) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(2) {
-  background: url(../images/allocine.png) no-repeat center center;
+  background: url(./allocine.png) no-repeat center center;
 }
 
 .c-hero-flex__item:nth-child(3) {
-  background: url(../images/questionnaire.png) no-repeat center center;
+  background: url(./questionnaire.png) no-repeat center center;
 }
 
 .c-hero-flex__title {
@@ -184,7 +184,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/bg-dark.png);
+  background-image: url(./bg-dark.png);
 }
 
 .dank-ass-loader {
@@ -570,7 +570,7 @@ div[class*=box] {
 }
 
 .box-2 {
-  background-image: url(../images/bg-dark.png);
+  background-image: url(./bg-dark.png);
 }
 
 .btn {
