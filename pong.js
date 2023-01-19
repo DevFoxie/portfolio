@@ -1,4 +1,6 @@
 var canvas = document.getElementById('canvas');
+var heightRatio = 1.5;
+canvas.height = canvas.width * heightRatio;
 var ctx = canvas.getContext('2d');
 
 canvas.width = 700;
