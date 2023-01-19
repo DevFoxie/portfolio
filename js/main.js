@@ -1,85 +1,61 @@
-Vue.config.devtools = true;
+var $menu = $('.Menu-list'),
+    $item = $('.Menu-list-item'),
+    w = $(window).width(), //window width
+    h = $(window).height(); //window height
 
-Vue.component('card', {
-    template: `
-    <div class="card-wrap"
-      @mousemove="handleMouseMove"
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave"
-      ref="card">
-      <div class="card"
-        :style="cardStyle">
-        <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
-        <div class="card-info">
-          <slot name="header"></slot>
-          <slot name="content"></slot>
-        </div>
-      </div>
-    </div>`,
-    mounted() {
-        this.width = this.$refs.card.offsetWidth;
-        this.height = this.$refs.card.offsetHeight;
-    },
-    props: ['dataImage'],
-    data: () => ({
-        width: 0,
-        height: 0,
-        mouseX: 0,
-        mouseY: 0,
-        mouseLeaveDelay: null
-    }),
-    computed: {
-        mousePX() {
-            return this.mouseX / this.width;
-        },
-        mousePY() {
-            return this.mouseY / this.height;
-        },
-        cardStyle() {
-            const rX = this.mousePX * 30;
-            const rY = this.mousePY * -30;
-            return {
-                transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
-            };
-        },
-        cardBgTransform() {
-            const tX = this.mousePX * -40;
-            const tY = this.mousePY * -40;
-            return {
-                transform: `translateX(${tX}px) translateY(${tY}px)`
-            }
-        },
-        cardBgImage() {
-            return {
-                backgroundImage: `url(${this.dataImage})`
-            }
-        }
-    },
-    methods: {
-        handleMouseMove(e) {
-            this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
-            this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
-        },
-        handleMouseEnter() {
-            clearTimeout(this.mouseLeaveDelay);
-        },
-        handleMouseLeave() {
-            this.mouseLeaveDelay = setTimeout(() => {
-                this.mouseX = 0;
-                this.mouseY = 0;
-            }, 1000);
-        }
+$(window).on('mousemove', function (e) {
+    var offsetX = 0.5 - e.pageX / w, //cursor position X
+        offsetY = 0.5 - e.pageY / h, //cursor position Y
+        dy = e.pageY - h / 2, //@h/2 = center of poster
+        dx = e.pageX - w / 2, //@w/2 = center of poster
+        theta = Math.atan2(dy, dx), //angle between cursor and center of poster in RAD
+        angle = theta * 180 / Math.PI - 90, //convert rad in degrees
+        offsetPoster = $menu.data('offset'),
+        transformPoster = 'translate3d(0, ' + -offsetX * offsetPoster + 'px, 0) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)'; //poster transform
+
+    //get angle between 0-360
+    if (angle < 0) {
+        angle = angle + 360;
     }
+
+    //poster transform
+    $menu.css('transform', transformPoster);
+
+    //parallax for each layer
+    $item.each(function () {
+        var $this = $(this),
+            offsetLayer = $this.data('offset') || 0,
+            transformLayer = 'translate3d(' + offsetX * offsetLayer + 'px, ' + offsetY * offsetLayer + 'px, 20px)';
+
+        $this.css('transform', transformLayer);
+    });
 });
 
-const app = new Vue({
-    el: '#app'
-});
+// SMTP JS EMAIL
 
-import { BreedingRhombusSpinner } from 'epic-spinners'
+let sendButton = document.getElementById("send-button");
+sendButton.addEventListener("click", handleFormSubmit);
 
-<breeding-rhombus-spinner
-    animation-duration="2000"
-    size="65"
-    color="#ff1d5e"
-/>
+
+function handleFormSubmit() {
+
+
+    let email = document.getElementById("email").value;
+    let phoneNumber = document.getElementById("phoneNumber").value;
+    let message = document.getElementById("message").value;
+
+
+
+    // envoyer l'email avec la librairie SMTPJS 
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "hmerniz.dev@proton.me",
+        Password: "08840675C440E3C32B0DDC5174DBAB17214A",
+        To: 'hmerniz.dev@proton.me',
+        From: "hmerniz.dev@gmail.com",
+        Subject: "After watching your portfolio ...",
+        Body: email + phoneNumber + message
+    }).then(
+        message => alert(message)
+    );
+}

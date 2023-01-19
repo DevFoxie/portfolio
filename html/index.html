@@ -15,6 +15,11 @@
     <!--BOOSTRAP INTEGRATION-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <title>DevFoxie Portfolio</title>
 
@@ -35,19 +40,47 @@
                         <a class="nav-link active mx-5" aria-current="page"
                             href="https://github.com/DevFoxie">github@DevFoxie</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
                 </ul>
                 <span class="navbar-text">
-                    Full-Stack web developer
+                    Junior web developer
                 </span>
             </div>
         </div>
     </nav>
+
+    <div class="box-2 mt-5 text-light">
+        <div class="btn btn-two">
+            <span><a class="text-light"
+                    href="https://drive.google.com/file/d/1yRh-U618IFHRou8fRoEQxMNAGxurYjjQ/view?usp=share_link">Curriculum
+                    Vitæ</a></span>
+
+        </div>
+    </div>
+
+    <div class="Menu">
+        <ul class="Menu-list" data-offset="10">
+            <li class="Menu-list-item" data-offset="20" onclick>
+                Home
+                <span class="Mask"><span>Home</span></span>
+                <span class="Mask"><span>Home</span></span>
+            </li>
+            <li class="Menu-list-item" data-offset="16" onclick>
+                Skills
+                <span class="Mask"><span><a href="#skills">Skills</a></span></span>
+                <span class="Mask"><span><a href="#skills">Skills</a></span></span>
+            </li>
+            <li class="Menu-list-item" data-offset="12" onclick>
+                Work
+                <span class="Mask" id="project"><span><a href="#work">Work</a></span></span>
+                <span class="Mask"><span><a href="#work">Work</a></span></span>
+            </li>
+            <li class="Menu-list-item" data-offset="8" onclick>
+                Contact
+                <span class="Mask"><span><a href="#contact">Contact</a></span></span>
+                <span class="Mask"><span><a href="#contact">Contact</a></span></span>
+            </li>
+        </ul>
+    </div>
 
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
@@ -60,24 +93,26 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="../images/mac.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Hello ! I'm a full-stack web developer from France</h5>
+                <img src="../images/mac.jpg" class="d-block w-100" alt="mac">
+                <div class="carousel-caption d-md-block text-light">
+                    <h5>Hello ! I'm a junior web developer from France</h5>
                     <p>Let me introduce myself, I may be part of your next project...</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                <img src="../images/js-original.jpg" class="d-block w-100" alt="JS">
+                <div class="carousel-caption d-md-block">
+                    <h4 class="text-light">JavaScript is my main language</h4>
+                    <p class="text-light">Most of my projects are JS based, as it's my go to language for web app
+                        development</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                <img src="../images/Webflow-vs-wordpress-1.jpg" class="d-block w-100" alt="wordpress-webflow">
+                <div class="carousel-caption d-md-block">
+                    <h5 class="text-light">Mastering websites tools...</h5>
+                    <p class="text-light">I'm also comfortable usings tools like wordpress or webflow to make websites
+                    </p>
                 </div>
             </div>
         </div>
@@ -91,175 +126,164 @@
         </button>
     </div>
 
+    <main>
+        <div class="dank-ass-loader" id="skills">
+            <h1 class="text-warning mb-3"><i class="fa-solid fa-spinner fa-flip"></i>Loading Skills ...</h1>
+            <div class="row">
+                <div class="arrow up outer outer-18"></div>
+                <div class="arrow down outer outer-17"></div>
+                <div class="arrow up outer outer-16"></div>
+                <div class="arrow down outer outer-15"></div>
+                <div class="arrow up outer outer-14"></div>
+            </div>
+            <div class="row">
+                <div class="arrow up outer outer-1"></div>
+                <div class="arrow down outer outer-2"></div>
+                <div class="arrow up inner inner-6"></div>
+                <div class="arrow down inner inner-5"></div>
+                <div class="arrow up inner inner-4"></div>
+                <div class="arrow down outer outer-13"></div>
+                <div class="arrow up outer outer-12"></div>
+            </div>
+            <div class="row">
+                <div class="arrow down outer outer-3"></div>
+                <div class="arrow up outer outer-4"></div>
+                <div class="arrow down inner inner-1"></div>
+                <div class="arrow up inner inner-2"></div>
+                <div class="arrow down inner inner-3"></div>
+                <div class="arrow up outer outer-11"></div>
+                <div class="arrow down outer outer-10"></div>
+            </div>
+            <div class="row">
+                <div class="arrow down outer outer-5"></div>
+                <div class="arrow up outer outer-6"></div>
+                <div class="arrow down outer outer-7"></div>
+                <div class="arrow up outer outer-8"></div>
+                <div class="arrow down outer outer-9"></div>
+            </div>
+        </div>
+    </main>
+
     <div class="container">
-        <h1 class="d-flex justify-content-center mt-3">Here are my main languages</h1>
-        <div class="d-flex justify-content-center mt-5 grid gap-3">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-plain-wordmark.svg" title="CSS3"
-                alt="CSS" width="80" height="80" />&nbsp;
-            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg" title="HTML5"
-                alt="HTML" width="80" height="80" />&nbsp;
+        <h1 class="d-flex justify-content-center text-light"><i class="fa-solid fa-angles-down fa-bounce"></i>Here are
+            my main languages<i class="fa-solid fa-angles-down fa-bounce"></i></h1>
+        <div class="d-flex justify-content-center mt-5 grid gap-2 mb-5">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-plain-wordmark.svg"
+                title="CSS3" alt="CSS" width="80" height="80" />&nbsp;
+            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original.svg"
+                title="HTML5" alt="HTML" width="80" height="80" />&nbsp;
             <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg"
                 title="JavaScript" alt="JavaScript" width="80" height="80" />&nbsp;
-            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-original.svg" title="mysql"
-                alt="mysql" width="80" height="80" />&nbsp;
+            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/mysql/mysql-original.svg"
+                title="mysql" alt="mysql" width="80" height="80" />&nbsp;
+        </div>
+        <hr>
+    </div>
+    <h1 id="work" class="text-light d-flex justify-content-center mb-3"><i
+            class="fa-solid fa-angles-down fa-bounce"></i>Some
+        previews of my
+        Work<i class="fa-solid fa-angles-down fa-bounce"></i></h1>
+    <hr>
+    <section class="c-hero-flex" id="project">
+        <a class="c-hero-flex__item">
+            <h2 class="c-hero-flex__title">Projet Drumpad</h2>
+        </a>
+        <a class="c-hero-flex__item">
+            <h2 class="c-hero-flex__title">Projet Allociné</h2>
+        </a>
+        <a class="c-hero-flex__item">
+            <h2 class="c-hero-flex__title">Projet questionnaire</h2>
+        </a>
+    </section>
+
+    <div class="background" id="contact">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>CONTACT</span>
+                            <span>ME</span>
+                        </div>
+                        <div class="app-contact">CONTACT INFO : +33 7.67.05.29.87</div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                <input class="app-form-control" placeholder="NAME" value="Hakim Merniz">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" id="email" placeholder="EMAIL">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" id="phoneNumber" placeholder="CONTACT NO">
+                            </div>
+                            <div class="app-form-group message">
+                                <input class="app-form-control" id="message" placeholder="MESSAGE">
+                            </div>
+                            <div class="app-form-group buttons">
+                                <button class="app-form-button">CANCEL</button>
+                                <button class="app-form-button" id="send-button">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="background background0"></div>
-<div class="background background1"></div>
-<div class="background background2"></div>
-<div class="background background3"></div>
-<div class="background background4"></div>
-<div class="background background5"></div>
-<div class="background background6"></div>
-<div class="background background7"></div>
-<div class="criterion">
-    <div class="text text0">W</div>
-    <div class="text text1">e</div>
-    <div class="text text2">l</div>
-    <div class="text text3">c</div>
-    <div class="text text4">o</div>
-    <div class="text text5">m</div>
-    <div class="text text6">e</div>
-    <div class="text text7">: )</div>
-    <div class="frame frame0"></div>
-    <div class="frame frame1"></div>
-    <div class="frame frame2"></div>
-    <div class="frame frame3"></div>
-    <div class="frame frame4"></div>
-    <div class="frame frame5"></div>
-    <div class="frame frame6"></div>
-    <div class="frame frame7"></div>
-    <div class="particle particle00"></div>
-    <div class="particle particle01"></div>
-    <div class="particle particle02"></div>
-    <div class="particle particle03"></div>
-    <div class="particle particle04"></div>
-    <div class="particle particle05"></div>
-    <div class="particle particle06"></div>
-    <div class="particle particle07"></div>
-    <div class="particle particle08"></div>
-    <div class="particle particle09"></div>
-    <div class="particle particle010"></div>
-    <div class="particle particle011"></div>
-    <div class="particle particle10"></div>
-    <div class="particle particle11"></div>
-    <div class="particle particle12"></div>
-    <div class="particle particle13"></div>
-    <div class="particle particle14"></div>
-    <div class="particle particle15"></div>
-    <div class="particle particle16"></div>
-    <div class="particle particle17"></div>
-    <div class="particle particle18"></div>
-    <div class="particle particle19"></div>
-    <div class="particle particle110"></div>
-    <div class="particle particle111"></div>
-    <div class="particle particle20"></div>
-    <div class="particle particle21"></div>
-    <div class="particle particle22"></div>
-    <div class="particle particle23"></div>
-    <div class="particle particle24"></div>
-    <div class="particle particle25"></div>
-    <div class="particle particle26"></div>
-    <div class="particle particle27"></div>
-    <div class="particle particle28"></div>
-    <div class="particle particle29"></div>
-    <div class="particle particle210"></div>
-    <div class="particle particle211"></div>
-    <div class="particle particle30"></div>
-    <div class="particle particle31"></div>
-    <div class="particle particle32"></div>
-    <div class="particle particle33"></div>
-    <div class="particle particle34"></div>
-    <div class="particle particle35"></div>
-    <div class="particle particle36"></div>
-    <div class="particle particle37"></div>
-    <div class="particle particle38"></div>
-    <div class="particle particle39"></div>
-    <div class="particle particle310"></div>
-    <div class="particle particle311"></div>
-    <div class="particle particle40"></div>
-    <div class="particle particle41"></div>
-    <div class="particle particle42"></div>
-    <div class="particle particle43"></div>
-    <div class="particle particle44"></div>
-    <div class="particle particle45"></div>
-    <div class="particle particle46"></div>
-    <div class="particle particle47"></div>
-    <div class="particle particle48"></div>
-    <div class="particle particle49"></div>
-    <div class="particle particle410"></div>
-    <div class="particle particle411"></div>
-    <div class="particle particle50"></div>
-    <div class="particle particle51"></div>
-    <div class="particle particle52"></div>
-    <div class="particle particle53"></div>
-    <div class="particle particle54"></div>
-    <div class="particle particle55"></div>
-    <div class="particle particle56"></div>
-    <div class="particle particle57"></div>
-    <div class="particle particle58"></div>
-    <div class="particle particle59"></div>
-    <div class="particle particle510"></div>
-    <div class="particle particle511"></div>
-    <div class="particle particle60"></div>
-    <div class="particle particle61"></div>
-    <div class="particle particle62"></div>
-    <div class="particle particle63"></div>
-    <div class="particle particle64"></div>
-    <div class="particle particle65"></div>
-    <div class="particle particle66"></div>
-    <div class="particle particle67"></div>
-    <div class="particle particle68"></div>
-    <div class="particle particle69"></div>
-    <div class="particle particle610"></div>
-    <div class="particle particle611"></div>
-    <div class="particle particle70"></div>
-    <div class="particle particle71"></div>
-    <div class="particle particle72"></div>
-    <div class="particle particle73"></div>
-    <div class="particle particle74"></div>
-    <div class="particle particle75"></div>
-    <div class="particle particle76"></div>
-    <div class="particle particle77"></div>
-    <div class="particle particle78"></div>
-    <div class="particle particle79"></div>
-    <div class="particle particle710"></div>
-    <div class="particle particle711"></div>
-</div>
 
-<h1 class="title">Vous voulez en savoir plus ?</h1>
+    <h1 class="text-light d-flex justify-content-center">If you lose the pong game, you must got me in your team :)</h1>
+    <div class="mb-5" style="text-align: center; padding-top: 6em;">
+        <canvas id="canvas" style="background-color:#1b1b1b">
+            Your browser doesn't support Canvas, try another or update
+        </canvas>
+    </div>
 
-<div id="app" class="container">
-  <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Javascript</h1>
-    <p slot="content">Mon langage de prédilection, la plupart de mes projets sont codés ainsi</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Beaches</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Trees</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Lakes</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-</div>
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.linkedin.com/in/hakim-merniz-34367b185/" role="button"><i
+                        class="fab fa-linkedin-in fa-bounce"></i></a>
 
-<div class="breeding-rhombus-spinner mx-5">
-    <div class="rhombus child-1"></div>
-    <div class="rhombus child-2"></div>
-    <div class="rhombus child-3"></div>
-    <div class="rhombus child-4"></div>
-    <div class="rhombus child-5"></div>
-    <div class="rhombus child-6"></div>
-    <div class="rhombus child-7"></div>
-    <div class="rhombus child-8"></div>
-    <div class="rhombus big"></div>
-  </div>
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/DevFoxie" role="button"><i
+                        class="fab fa-github fa-bounce"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-white" href="https://github.com/DevFoxie">DevFoxie</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!--BACK TO TOP BUTTON-->
+
+    <div id="back-to-top">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
 
     <!--FONTAWESOME SCRIPT-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
@@ -271,10 +295,17 @@
         crossorigin="anonymous"></script>
     <!--JS SCRIPT-->
     <script src="../js/main.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="../js/pong.js"></script>
     <!--BABEL JS SCRIPT-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
     <!--VUE JS SCRIPT-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="../src/main.ts"></script>
+    <!-- SMTPJS library -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
